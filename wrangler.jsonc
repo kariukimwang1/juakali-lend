@@ -1,0 +1,28 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "0199107a-4921-78c1-b6e5-8fd79fcad2ff",
+	"main": "./src/worker/index.ts",
+	"compatibility_date": "2025-06-17",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"observability": {
+		"enabled": true,
+	},
+	"upload_source_maps": true,
+	"assets": {
+		"not_found_handling": "single-page-application",
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "0199107a-4921-78c1-b6e5-8fd79fcad2ff",
+			"database_id": "0199107a-4921-78c1-b6e5-8fd79fcad2ff",
+		},
+		{
+			"binding": "juakali_lend_db",
+			"database_name": "juakali-lend-db",
+			"database_id": "699a284d-8bd7-4d4d-b715-24ade738c601"
+		},
+	],
+}

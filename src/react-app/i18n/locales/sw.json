@@ -1,0 +1,200 @@
+{
+  "common": {
+    "login": "Ingia",
+    "register": "Jisajili",
+    "getStarted": "Anza",
+    "apply": "Omba",
+    "applyNow": "Omba Sasa",
+    "learnMore": "Jifunze Zaidi",
+    "contactUs": "Wasiliana Nasi",
+    "helpCenter": "Kituo cha Msaada",
+    "watchDemo": "Angalia Mfano",
+    "goToDashboard": "Nenda Dashbodi",
+    "alreadyCustomer": "Una Akaunti Tayari?",
+    "dontHaveAccount": "Huna akaunti?",
+    "createAccount": "Fungua Akaunti",
+    "signIn": "Ingia",
+    "signUp": "Jisajili",
+    "email": "Barua Pepe",
+    "password": "Nenosiri",
+    "confirmPassword": "Thibitisha Nenosiri",
+    "rememberMe": "Nikumbuke",
+    "forgotPassword": "Umesahau nenosiri?",
+    "continueWithGoogle": "Endelea na Google",
+    "orContinueWith": "Au endelea na barua pepe",
+    "loading": "Inapakia...",
+    "next": "Ifuatayo",
+    "previous": "Iliyotangulia",
+    "save": "Hifadhi",
+    "cancel": "Ghairi",
+    "submit": "Wasilisha",
+    "close": "Funga"
+  },
+  "navigation": {
+    "home": "Nyumbani",
+    "dashboard": "Dashbodi",
+    "forRetailers": "Kwa Wachuuzi",
+    "forLenders": "Kwa Wakopeshaji",
+    "forSuppliers": "Kwa Wasambazaji",
+    "about": "Kuhusu",
+    "support": "Msaada",
+    "language": "Lugha"
+  },
+  "hero": {
+    "title": "Kuwawezesha Wafanyabiashara wa",
+    "titleHighlight": "JuaKali",
+    "titleEnd": "Kenya",
+    "subtitle": "Pata mkopo wa haraka, wa haki, na wa kubadilika uliotengenezwa maalum kwa sekta isiyo rasmi ya Kenya. Jenga biashara yako, jenga mustakabali wako na ufupi wa vitu vya papo hapo.",
+    "cta": {
+      "retailer": "Pata Bidhaa kwa Mkopo",
+      "retailerSub": "Kwa Wachuuzi",
+      "lender": "Kuwa Mkopeshaji",
+      "lenderSub": "Kwa Wawekezaji",
+      "supplier": "Uza Bidhaa Zaidi",
+      "supplierSub": "Kwa Wasambazaji"
+    },
+    "startApplication": "Anza Ombi Lako"
+  },
+  "features": {
+    "title": "Kwa Nini Uchague JuaKali Lend?",
+    "subtitle": "Tunaelewa changamoto za kipekee za sekta isiyo rasmi ya Kenya na tumeunda suluhisho zinazokufaa.",
+    "quickApproval": {
+      "title": "Idhini ya Dakika 5",
+      "description": "Pata idhini na fedha kwa dakika 5 tu kwa kutumia tathmini yetu ya AI."
+    },
+    "noCollateral": {
+      "title": "Hakuna Dhamana",
+      "description": "Mikopo isiyo na dhamana kulingana na utendaji wa biashara yako na historia ya pesa za simu."
+    },
+    "buildCredit": {
+      "title": "Jenga Mkopo",
+      "description": "Kila malipo yanasaidia kujenga alama yako ya mkopo kwa mikopo mikubwa katika siku zijazo."
+    },
+    "mobileFirst": {
+      "title": "Kwanza Simu",
+      "description": "Omba, simamia, na lipa mikopo moja kwa moja kutoka simu yako kupitia M-Pesa."
+    }
+  },
+  "calculator": {
+    "title": "Hesabu Kikomo chako cha Mkopo",
+    "subtitle": "Pata kadirio la haraka la kiasi cha mkopo unachostahili kulingana na aina ya biashara yako na mapato",
+    "businessType": "Aina ya Biashara",
+    "monthlyRevenue": "Mapato ya Kila Mwezi (KES)",
+    "creditLimit": "Kikomo cha Mkopo Kinachokadiriwa",
+    "dailyPayment": "Malipo ya Kila Siku (5%)",
+    "repaymentPeriod": "Kipindi cha Kulipa Kinachokadiriwa"
+  },
+  "process": {
+    "title": "Jinsi Inavyofanya Kazi",
+    "subtitle": "Kutoka ombi hadi ufupi katika hatua 4 rahisi",
+    "steps": {
+      "apply": {
+        "title": "Omba katika Dakika 5",
+        "description": "Kamilisha ombi letu rahisi na maelezo ya biashara yako na nyaraka za uthibitisho."
+      },
+      "approval": {
+        "title": "Pata Idhini ya Haraka",
+        "description": "AI yetu inakagua ombi lako na kutoa uamuzi wa haraka wa mkopo na kikomo."
+      },
+      "choose": {
+        "title": "Chagua Bidhaa Zako",
+        "description": "Vinjari soko letu la wasambazaji na uchague mizigo unayohitaji kwa duka lako."
+      },
+      "pay": {
+        "title": "Lipa kutoka Mauzo",
+        "description": "Lipa tu 5% ya kiasi cha mkopo kila siku kutoka mauzo ya biashara yako kupitia pesa za simu."
+      }
+    }
+  },
+  "statistics": {
+    "title": "Utendaji wa Jukwaa kwa Wakati Halisi",
+    "subtitle": "Angalia jukwaa letu linavyokua kila sekunde na masasisho ya moja kwa moja ya mikopo, watumiaji, na hadithi za mafanikio",
+    "totalLoans": "Mikopo Jumla",
+    "activeUsers": "Watumiaji Hai",
+    "successRate": "Kiwango cha Mafanikio",
+    "amountDisbursed": "Kiasi Kilichotolewa",
+    "avgRepayment": "Kip. Wastani wa Kulipa",
+    "defaultRate": "Kiwango cha Kukosa",
+    "satisfaction": "Kiwango cha Kuridhika"
+  },
+  "testimonials": {
+    "title": "Tunaaminiwa na Wafanyabiashara Kote Kenya",
+    "subtitle": "Jiunge na maelfu ambao wamekuza biashara zao na JuaKali Lend"
+  },
+  "retailer": {
+    "hero": {
+      "badge": "Kwa Wachuuzi",
+      "title": "Jaza Duka Lako Sasa,",
+      "titleHighlight": "Lipa kutoka Mauzo ya Kila Siku",
+      "subtitle": "Pata bidhaa unazohitaji bila malipo ya awali. Lipa tu 5% kila siku kutoka mauzo yako. Hakuna dhamana, hakuna malipo maalum - ni ufupi wa kubadilika ambao unafanya kazi na mtiririko wa biashara yako.",
+      "stats": {
+        "application": "Ombi",
+        "approval": "Idhini",
+        "payment": "Malipo ya Kila Siku"
+      },
+      "cta": "Omba Mkopo",
+      "calculator": "Hesabu Kikomo cha Mkopo"
+    },
+    "benefits": {
+      "title": "Kwa Nini Wachuuzi Wanachagua JuaKali Lend",
+      "subtitle": "Kila kitu unachohitaji kukuza biashara yako ya uchaguzi",
+      "instant": {
+        "title": "Ufikiaji wa Haraka",
+        "description": "Hakuna dhamana inayohitajika, idhini ya kidijitali katika dakika, si siku."
+      },
+      "flexible": {
+        "title": "Malipo ya Kubadilika",
+        "description": "Lipa 5% kila siku kutoka mauzo, hakuna malipo maalum yanayosumbua mzunguko wako wa fedha."
+      },
+      "growth": {
+        "title": "Ukuaji wa Mkopo",
+        "description": "Jenga alama yako ya mkopo na stahili kwa kiasi kikubwa zaidi baada ya muda."
+      },
+      "network": {
+        "title": "Mtandao wa Wasambazaji",
+        "description": "Ufikiaji wa wasambazaji wengi wa ubora na bei za ushindani."
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Karibu Tena",
+      "subtitle": "Ingia ili kufikia akaunti yako",
+      "enterEmail": "Ingiza barua pepe yako",
+      "enterPassword": "Ingiza nenosiri lako",
+      "signInWith": "Jisajili na Google",
+      "orContinueWithEmail": "Au fungua akaunti na barua pepe"
+    },
+    "register": {
+      "title": "Jiunge na JuaKali Lend",
+      "subtitle": "Anza safari yako ya ukuaji wa kifedha",
+      "createPassword": "Unda nenosiri",
+      "confirmPassword": "Thibitisha nenosiri",
+      "termsAgreement": "Nakubali Masharti ya Huduma na Sera ya Faragha, na nikubali uthibitisho wa KYC na ukaguzi wa mkopo.",
+      "passwordStrength": "Nguvu ya nenosiri"
+    }
+  },
+  "footer": {
+    "description": "Kuwawezesha wafanyabiashara wa Kenya na suluhisho za mkopo zinazofikiwa, za haki, na za haraka.",
+    "services": {
+      "title": "Huduma",
+      "businessLoans": "Mikopo ya Biashara",
+      "workingCapital": "Mtaji wa Kufanya Kazi",
+      "equipmentFinancing": "Ufupi wa Vifaa",
+      "creditBuilding": "Kujenga Mkopo"
+    },
+    "support": {
+      "title": "Msaada",
+      "loanCalculator": "Kikokotoo cha Mkopo",
+      "faqs": "Maswali Yanayoulizwa Mara Kwa Mara"
+    },
+    "legal": {
+      "title": "Kisheria",
+      "terms": "Masharti ya Huduma",
+      "privacy": "Sera ya Faragha",
+      "licensing": "Leseni",
+      "complaints": "Malalamiko"
+    },
+    "copyright": "© 2024 JuaKali Lend. Haki zote zimehifadhiwa. Inaruhusiwa na Benki Kuu ya Kenya."
+  }
+}

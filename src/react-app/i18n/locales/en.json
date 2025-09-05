@@ -1,0 +1,200 @@
+{
+  "common": {
+    "login": "Login",
+    "register": "Register",
+    "getStarted": "Get Started",
+    "apply": "Apply",
+    "applyNow": "Apply Now",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "helpCenter": "Help Center",
+    "watchDemo": "Watch Demo",
+    "goToDashboard": "Go to Dashboard",
+    "alreadyCustomer": "Already a Customer?",
+    "dontHaveAccount": "Don't have an account?",
+    "createAccount": "Create Account",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "continueWithGoogle": "Continue with Google",
+    "orContinueWith": "Or continue with email",
+    "loading": "Loading...",
+    "next": "Next",
+    "previous": "Previous",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "close": "Close"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "forRetailers": "For Retailers",
+    "forLenders": "For Lenders",
+    "forSuppliers": "For Suppliers",
+    "about": "About",
+    "support": "Support",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Empowering Kenya's",
+    "titleHighlight": "JuaKali",
+    "titleEnd": "Entrepreneurs",
+    "subtitle": "Access fast, fair, and flexible credit designed specifically for Kenya's informal sector. Build your business, build your future with instant goods financing.",
+    "cta": {
+      "retailer": "Get Goods on Credit",
+      "retailerSub": "For Retailers",
+      "lender": "Become a Lender",
+      "lenderSub": "For Investors",
+      "supplier": "Sell More Goods",
+      "supplierSub": "For Suppliers"
+    },
+    "startApplication": "Start Your Application"
+  },
+  "features": {
+    "title": "Why Choose JuaKali Lend?",
+    "subtitle": "We understand the unique challenges of Kenya's informal sector and have built solutions that work for you.",
+    "quickApproval": {
+      "title": "5-Minute Approval",
+      "description": "Get approved and funded in as little as 5 minutes with our AI-powered assessment."
+    },
+    "noCollateral": {
+      "title": "No Collateral",
+      "description": "Unsecured loans based on your business performance and mobile money history."
+    },
+    "buildCredit": {
+      "title": "Build Credit",
+      "description": "Every payment helps build your credit score for larger loans in the future."
+    },
+    "mobileFirst": {
+      "title": "Mobile First",
+      "description": "Apply, manage, and repay loans directly from your mobile phone via M-Pesa."
+    }
+  },
+  "calculator": {
+    "title": "Calculate Your Credit Limit",
+    "subtitle": "Get an instant estimate of how much credit you qualify for based on your business type and revenue",
+    "businessType": "Business Type",
+    "monthlyRevenue": "Monthly Revenue (KES)",
+    "creditLimit": "Estimated Credit Limit",
+    "dailyPayment": "Daily Payment (5%)",
+    "repaymentPeriod": "Estimated Repayment Period"
+  },
+  "process": {
+    "title": "How It Works",
+    "subtitle": "From application to funding in 4 simple steps",
+    "steps": {
+      "apply": {
+        "title": "Apply in 5 Minutes",
+        "description": "Complete our simple application with your business details and verification documents."
+      },
+      "approval": {
+        "title": "Get Instant Approval",
+        "description": "Our AI reviews your application and provides immediate credit decision and limit."
+      },
+      "choose": {
+        "title": "Choose Your Goods",
+        "description": "Browse our supplier marketplace and select the inventory you need for your shop."
+      },
+      "pay": {
+        "title": "Pay from Sales",
+        "description": "Pay just 5% of the loan amount daily from your business sales via mobile money."
+      }
+    }
+  },
+  "statistics": {
+    "title": "Platform Performance in Real-Time",
+    "subtitle": "Watch our platform grow every second with live updates of loans, users, and success stories",
+    "totalLoans": "Total Loans",
+    "activeUsers": "Active Users",
+    "successRate": "Success Rate",
+    "amountDisbursed": "Amount Disbursed",
+    "avgRepayment": "Avg. Repayment",
+    "defaultRate": "Default Rate",
+    "satisfaction": "Satisfaction Rate"
+  },
+  "testimonials": {
+    "title": "Trusted by Entrepreneurs Across Kenya",
+    "subtitle": "Join thousands who have grown their businesses with JuaKali Lend"
+  },
+  "retailer": {
+    "hero": {
+      "badge": "For Retailers",
+      "title": "Stock Your Shop Now,",
+      "titleHighlight": "Pay from Daily Sales",
+      "subtitle": "Get the goods you need without upfront payment. Pay just 5% daily from your sales. No collateral, no fixed installments - just flexible financing that works with your business flow.",
+      "stats": {
+        "application": "Application",
+        "approval": "Approval",
+        "payment": "Daily Payment"
+      },
+      "cta": "Apply for Credit",
+      "calculator": "Calculate Credit Limit"
+    },
+    "benefits": {
+      "title": "Why Retailers Choose JuaKali Lend",
+      "subtitle": "Everything you need to grow your retail business",
+      "instant": {
+        "title": "Instant Access",
+        "description": "No collateral required, digital approval in minutes, not days."
+      },
+      "flexible": {
+        "title": "Flexible Repayment",
+        "description": "Pay 5% daily from sales, no fixed installments that stress your cash flow."
+      },
+      "growth": {
+        "title": "Credit Growth",
+        "description": "Build your credit score and qualify for larger amounts over time."
+      },
+      "network": {
+        "title": "Supplier Network",
+        "description": "Access to multiple quality suppliers with competitive prices."
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to access your account",
+      "enterEmail": "Enter your email",
+      "enterPassword": "Enter your password",
+      "signInWith": "Sign up with Google",
+      "orContinueWithEmail": "Or create account with email"
+    },
+    "register": {
+      "title": "Join JuaKali Lend",
+      "subtitle": "Start your journey to financial growth",
+      "createPassword": "Create password",
+      "confirmPassword": "Confirm password",
+      "termsAgreement": "I agree to the Terms of Service and Privacy Policy, and consent to KYC verification and credit bureau checks.",
+      "passwordStrength": "Password strength"
+    }
+  },
+  "footer": {
+    "description": "Empowering Kenya's entrepreneurs with accessible, fair, and fast credit solutions.",
+    "services": {
+      "title": "Services",
+      "businessLoans": "Business Loans",
+      "workingCapital": "Working Capital",
+      "equipmentFinancing": "Equipment Financing",
+      "creditBuilding": "Credit Building"
+    },
+    "support": {
+      "title": "Support",
+      "loanCalculator": "Loan Calculator",
+      "faqs": "FAQs"
+    },
+    "legal": {
+      "title": "Legal",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "licensing": "Licensing",
+      "complaints": "Complaints"
+    },
+    "copyright": "© 2024 JuaKali Lend. All rights reserved. Licensed by Central Bank of Kenya."
+  }
+}

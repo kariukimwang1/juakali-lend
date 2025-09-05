@@ -1,0 +1,279 @@
+const twilio = require('twilio');
+
+class TwilioService {
+  constructor() {
+    this.client = null;
+    this.initialize();
+  }
+
+  initialize() {
+    try {
+      const accountSid = process.env.TWILIO_ACCOUNT_SID;
+      const authToken = process.env.TWILIO_AUTH_TOKEN;
+      this.fromNumber = process.env.TWILIO_PHONE_NUMBER;
+
+      if (!accountSid || !authToken || !this.fromNumber) {
+        console.warn('⚠️ Twilio credentials not configured. SMS via Twilio will not work.');
+        return;
+      }
+
+      this.client = twilio(accountSid, authToken);
+      console.log('✅ Twilio service initialized successfully');
+    } catch (error) {
+      console.error('❌ Failed to initialize Twilio service:', error);
+    }
+  }
+
+  async sendSMS(to, message, options = {}) {
+    if (!this.client) {
+      throw new Error('Twilio service not initialized');
+    }
+
+    try {
+      // Ensure phone number is in international format
+      const formattedPhone = this.formatPhoneNumber(to);
+      
+      const messageOptions = {
+        body: message,
+        from: this.fromNumber,
+        to: formattedPhone,
+        ...options
+      };
+
+      const result = await this.client.messages.create(messageOptions);
+
+      console.log(`📱 SMS sent via Twilio to ${formattedPhone}: ${result.sid}`);
+
+      return {
+        success: true,
+        messageId: result.sid,
+        status: result.status,
+        to: formattedPhone,
+        provider: 'twilio'
+      };
+    } catch (error) {
+      console.error('❌ Twilio SMS error:', error);
+      
+      return {
+        success: false,
+        error: error.message,
+        code: error.code,
+        provider: 'twilio'
+      };
+    }
+  }
+
+  async sendWhatsApp(to, message, options = {}) {
+    if (!this.client) {
+      throw new Error('Twilio service not initialized');
+    }
+
+    try {
+      const formattedPhone = this.formatPhoneNumber(to);
+      
+      const messageOptions = {
+        body: message,
+        from: `whatsapp:${this.fromNumber}`,
+        to: `whatsapp:${formattedPhone}`,
+        ...options
+      };
+
+      const result = await this.client.messages.create(messageOptions);
+
+      console.log(`💬 WhatsApp message sent via Twilio to ${formattedPhone}: ${result.sid}`);
+
+      return {
+        success: true,
+        messageId: result.sid,
+        status: result.status,
+        to: formattedPhone,
+        provider: 'twilio_whatsapp'
+      };
+    } catch (error) {
+      console.error('❌ Twilio WhatsApp error:', error);
+      
+      return {
+        success: false,
+        error: error.message,
+        code: error.code,
+        provider: 'twilio_whatsapp'
+      };
+    }
+  }
+
+  async makeCall(to, url, options = {}) {
+    if (!this.client) {
+      throw new Error('Twilio service not initialized');
+    }
+
+    try {
+      const formattedPhone = this.formatPhoneNumber(to);
+      
+      const callOptions = {
+        url: url,
+        from: this.fromNumber,
+        to: formattedPhone,
+        ...options
+      };
+
+      const result = await this.client.calls.create(callOptions);
+
+      console.log(`📞 Call initiated via Twilio to ${formattedPhone}: ${result.sid}`);
+
+      return {
+        success: true,
+        callId: result.sid,
+        status: result.status,
+        to: formattedPhone,
+        provider: 'twilio'
+      };
+    } catch (error) {
+      console.error('❌ Twilio call error:', error);
+      
+      return {
+        success: false,
+        error: error.message,
+        code: error.code,
+        provider: 'twilio'
+      };
+    }
+  }
+
+  async getMessageStatus(messageSid) {
+    if (!this.client) {
+      throw new Error('Twilio service not initialized');
+    }
+
+    try {
+      const message = await this.client.messages(messageSid).fetch();
+      
+      return {
+        success: true,
+        status: message.status,
+        errorCode: message.errorCode,
+        errorMessage: message.errorMessage,
+        dateCreated: message.dateCreated,
+        dateSent: message.dateSent,
+        dateUpdated: message.dateUpdated
+      };
+    } catch (error) {
+      console.error('❌ Error fetching Twilio message status:', error);
+      
+      return {
+        success: false,
+        error: error.message
+      };
+    }
+  }
+
+  formatPhoneNumber(phone) {
+    // Remove any spaces, dashes, or special characters
+    let cleaned = phone.replace(/[\s\-\(\)]/g, '');
+    
+    // If phone starts with 0, replace with +254 (Kenya)
+    if (cleaned.startsWith('0')) {
+      cleaned = '+254' + cleaned.substring(1);
+    }
+    
+    // If phone starts with 254, add +
+    if (cleaned.startsWith('254') && !cleaned.startsWith('+254')) {
+      cleaned = '+' + cleaned;
+    }
+    
+    // If phone doesn't start with +, assume it's missing country code
+    if (!cleaned.startsWith('+')) {
+      cleaned = '+254' + cleaned;
+    }
+    
+    return cleaned;
+  }
+
+  // Bulk SMS sending
+  async sendBulkSMS(recipients, message, options = {}) {
+    if (!this.client) {
+      throw new Error('Twilio service not initialized');
+    }
+
+    const results = [];
+    const batchSize = options.batchSize || 10;
+    const delay = options.delay || 1000; // 1 second delay between batches
+
+    for (let i = 0; i < recipients.length; i += batchSize) {
+      const batch = recipients.slice(i, i + batchSize);
+      const batchPromises = batch.map(async (recipient) => {
+        try {
+          const result = await this.sendSMS(recipient.phone, message, {
+            ...options,
+            // You can customize message per recipient
+            body: message.replace(/{{name}}/g, recipient.name || '')
+          });
+          
+          return {
+            recipient: recipient.phone,
+            result
+          };
+        } catch (error) {
+          return {
+            recipient: recipient.phone,
+            result: {
+              success: false,
+              error: error.message
+            }
+          };
+        }
+      });
+
+      const batchResults = await Promise.all(batchPromises);
+      results.push(...batchResults);
+
+      // Add delay between batches to avoid rate limiting
+      if (i + batchSize < recipients.length) {
+        await new Promise(resolve => setTimeout(resolve, delay));
+      }
+    }
+
+    const successful = results.filter(r => r.result.success).length;
+    const failed = results.length - successful;
+
+    console.log(`📊 Bulk SMS completed: ${successful} sent, ${failed} failed`);
+
+    return {
+      success: true,
+      total: results.length,
+      successful,
+      failed,
+      results
+    };
+  }
+
+  // Verify phone number
+  async verifyPhoneNumber(phone) {
+    if (!this.client) {
+      throw new Error('Twilio service not initialized');
+    }
+
+    try {
+      const formattedPhone = this.formatPhoneNumber(phone);
+      const lookup = await this.client.lookups.v1.phoneNumbers(formattedPhone).fetch();
+      
+      return {
+        success: true,
+        valid: true,
+        phone: lookup.phoneNumber,
+        countryCode: lookup.countryCode,
+        nationalFormat: lookup.nationalFormat,
+        carrier: lookup.carrier
+      };
+    } catch (error) {
+      console.error('❌ Phone verification error:', error);
+      
+      return {
+        success: false,
+        valid: false,
+        error: error.message
+      };
+    }
+  }
+}
+
+module.exports = new TwilioService();
